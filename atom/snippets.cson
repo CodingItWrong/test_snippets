@@ -1,0 +1,86 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.source.ruby':
+  'Frozen string literals comment':
+    'prefix': 'frozen'
+    'body': """
+      # frozen_string_literal: true
+
+    """
+  'RSpec root describe':
+    'prefix': 'rspec'
+    'body': """
+      RSpec.describe ${1:Subject} do
+        ${2:body}
+      end
+    """
+  'RSpec describe':
+    'prefix': 'describe'
+    'body': """
+      describe '${1:description}' do
+        ${2:body}
+      end
+    """
+  'RSpec context':
+    'prefix': 'context'
+    'body': """
+      context '${1:description}' do
+        ${2:body}
+      end
+    """
+  'RSpec example':
+    'prefix': 'it'
+    'body': """
+      it '${1:description}' do
+        ${2:body}
+      end
+    """
+  'RSpec expectation':
+    'prefix': 'expect'
+    'body': 'expect(${1:expected}).to ${2:matcher}'
+
+'.source.js':
+  'mocha describe':
+    'prefix': 'describe'
+    'body': """
+      describe('${1:description}', function() {
+        ${2:body}
+      });
+    """
+  'mocha context':
+    'prefix': 'context'
+    'body': """
+      context('${1:description}', function() {
+        ${2:body}
+      });
+    """
+  'mocha example':
+    'prefix': 'it'
+    'body': """
+      it('${1:description}', function() {
+        ${2:body}
+      });
+    """
+  'mocha expectation':
+    'prefix': 'expect'
+    'body': 'expect(${1:expected}).to.${2:matcher};'

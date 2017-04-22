@@ -8,7 +8,7 @@ Snippets for autocompleting tests for:
 
 # Usage
 
-From within a file of the appropriate type, begin to type `describe`, `context`, 
+From within a file of the appropriate type, begin to type `describe`, `context`, etc. You should get the option to select the snippet. Then you will be able to tab through placeholders to complete them.
 
 # Installation
 
